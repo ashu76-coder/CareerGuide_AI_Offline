@@ -1,0 +1,17 @@
+# Python basics
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Django basics
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# VS Code settings
+.vscode/
