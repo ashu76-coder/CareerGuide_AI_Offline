@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Guide AI (Offline)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Career Guide AI (Offline)</h1>
+        <form method="post" action="/get_advice">
+            <textarea name="user_input" placeholder="Enter your qualification or interest..." required></textarea>
+            <button type="submit">Get Career Advice</button>
+        </form>
+
+        {% if request.method == 'POST' %}
+        <div class="response">
+            <h3>Career Advice:</h3>
+            <p>{{ advice }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
